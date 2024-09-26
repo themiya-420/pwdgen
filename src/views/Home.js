@@ -54,8 +54,8 @@ const Home = () => {
     return (
         <div>
             <MatrixRainingCode className='absolute inset' />
-            <div className='w-screen h-screen flex flex-row justify-center items-center'>
-                <div className='w-1/2 h-3/4 flex flex-col items-center p-10 bg-black rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-purple-500'>
+            <div className='w-screen h-screen p-10 md:p-0 flex flex-row justify-center items-center'>
+                <div className='w-full h-full md:w-1/2 md:h-3/4 flex flex-col items-center p-10 bg-black rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-purple-500'>
                     <h1 className='text-3xl uppercase font-bold text-purple-500'>PWD <span className='text-3xl uppercase font-bold text-white '>GEN</span></h1>
 
                     <form className='mt-10'>
