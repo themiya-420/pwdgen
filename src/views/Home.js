@@ -120,8 +120,18 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+
+                    <div className='text-white font-mono mt-10'>
+                        Made with 💗 By <a href='https://github.com/themiya-420'>Themiya</a>
+                    </div>
+
+                    <div className='text-gray-400 text-sm font-mono mt-5'>
+                        Passwords DO NOT Save on the Backend.
+                    </div>
                 </div>
             </div>
+
+           
         </div>
     );
 }
