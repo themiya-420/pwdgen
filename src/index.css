@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+input[type="range"]::-webkit-slider-runnable-track {
+    @apply h-2 bg-gray-800 ;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    @apply w-5 h-5 bg-purple-500   cursor-pointer transform -translate-y-1.5;
+}
