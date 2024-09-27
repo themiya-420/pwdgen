@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 // Component Imports
 import MatrixRainingCode from '../components/MatrixEffect';
 
+//Icon Imports 
+import { IoCloudDownloadOutline } from "react-icons/io5";
+import { MdClear } from "react-icons/md";
+
+
+
 const Home = () => {
     const [minLength, setMinLength] = useState(8);
     const [maxLength, setMaxLength] = useState(12);
@@ -50,6 +56,12 @@ const Home = () => {
         document.body.appendChild(element);
         element.click();
     };
+
+    const clearEverything = (e) => {
+        e.preventDefault();
+        setCharacters('');
+        setPasswords([]);
+    }
 
     return (
         <div>
@@ -113,12 +125,18 @@ const Home = () => {
                         </div>
                     </form>
 
-                    <div className="mt-6 bg-none border border-purple-500 text-white font-mono font-extralight  p-4 rounded-md w-full h-40 overflow-y-scroll">
+                    <div className="mt-6 mb-5 bg-none border border-purple-500 text-white font-mono font-extralight  p-4 rounded-md w-full h-40 overflow-y-scroll">
                         {passwords.map((pw, index) => (
                             <div key={index} className=" text-sm mb-1">
                                 {pw}
                             </div>
                         ))}
+                       
+                    </div>
+
+                    <div className=' w-full  flex flex-row gap-6 items-end justify-end'>
+                        <IoCloudDownloadOutline onClick={downloadPasswords} className='cursor-pointer text-purple-500' />
+                        <MdClear onClick={clearEverything} className='cursor-pointer text-purple-500'/>
                     </div>
 
                     <div className='text-white font-mono mt-10'>
